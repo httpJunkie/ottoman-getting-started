@@ -1,7 +1,7 @@
-const { PersonModel, CommentModel } = require('./ottoman-models')
+// const { PersonModel, CommentModel } = require('./ottoman-models')
 
-// const PersonModel = require('./models').PersonModel
-// const CommentModel = require('./models').CommentModel
+const PersonModel = require('./ottoman-models').PersonModel
+const CommentModel = require('./ottoman-models').CommentModel
 
 const router = function (app) {
 
