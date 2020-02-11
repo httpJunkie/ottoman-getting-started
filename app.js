@@ -19,17 +19,11 @@ console.log(user +" " + pass)
 const bucket = cluster.openBucket("ottoman-example")
       bucket.operationTimeout = 120 * 1000
 
-// for use in `models.js` and `routes.js`
 module.exports.bucket = bucket
-
-// import routes for use in our initialized `app` object
-const routes = require('./routes')(app)
-
-// point ottoman at our bucket
 ottoman.bucket = bucket;
 
-// ensure we use the indexes that ottoman expects
-// ie. every index in your schema exists in Couchbase
+const routes = require('./routes')(app)
+
 ottoman.ensureIndices(function(err) {
   if (err) return console.error(err);
   var server = app.listen(3000, () => {
