@@ -1,6 +1,5 @@
 const ottoman = require('ottoman')
-
-ottoman.bucket = require('./app').bucket
+      ottoman.bucket = require('./app').bucket
 
 const getNewDate = () => new Date()
 
@@ -17,7 +16,7 @@ let PersonModel = ottoman.model('person', {
   comments: [{ ref: 'Comment' }]
 })
 
-var CommentModel = ottoman.model('Coment', {
+var CommentModel = ottoman.model('Comment', {
   timestamp: {
     type: 'Date',
     default: getNewDate()

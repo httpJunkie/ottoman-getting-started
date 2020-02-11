@@ -13,10 +13,9 @@ const router = function (app) {
       res.send(people)
     })
   })
+  // app.get('/person/:id', (req, res) => {
+  // })
 
-  app.get('/person/:id', (req, res) => {
-    
-  })
   app.post('/person/', (req, res) => {
     const person = new PersonModel({
       name: {
@@ -33,10 +32,8 @@ const router = function (app) {
     })
   })
   // app.get('/comment', (req, res) => {
-
   // })
 
 }
 
-// export our routes
 module.exports = router

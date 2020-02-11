@@ -1,4 +1,3 @@
-
 require('dotenv').config()
 const { user, pass } = process.env
 
@@ -13,7 +12,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const cluster  = new couchbase.Cluster("couchbase://localhost")
-console.log(user +" " + pass)
       cluster.authenticate(user, pass)
 
 const bucket = cluster.openBucket("ottoman-example")
